@@ -13,6 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/base.css">
     <!-- endbuild -->
   </head>
   <body ng-app="quizApp">
@@ -22,17 +23,18 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-       <div class="header">
+       <div class="header row">
         <h1>
           <a class="h1 text-muted" href="#main">Quizzofy</a>
-          <small><p class="h1 pull-right small">Are you really happy ?</p>  
+          <p class="h1 pull-right small"><small>Are you really happy ?</small></p>
         </h1>
       </div>    
 
       <div ng-view=""></div>
 
-      <div class="footer">
+      <div class="footer row">        
         <ul class="pagination">
+          <p><small>Progress...</small></p>
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li class="active"><a href="#">3</a></li>
