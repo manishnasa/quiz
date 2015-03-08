@@ -14,7 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/base.css">
-    <!-- endbuild -->
+    <!-- endbuild -->    
   </head>
   <body ng-app="quizApp">
     <!--[if lt IE 7]>
@@ -26,20 +26,20 @@
        <div class="header row">
         <h1>
           <a class="h1 text-muted" href="#main">Quizzofy</a>
-          <p class="h1 pull-right small"><small>Are you really happy ?</small></p>
+          <!--
+          <p class="h1 pull-right small"><small>Login | Facebook | Subscribe</small></p>
+          -->
         </h1>
       </div>    
 
       <div ng-view=""></div>
-
-      <div class="footer row">        
+      
+      <div class="footer row" ng-controller="QuestionCtrl">        
         <ul class="pagination">
-          <p><small>Progress...</small></p>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li class="active"><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
+          <p><small>Progress... we have {{questions.length}} questions {{question1.name}}</small></p>
+          <li ng-repeat="q in questions track by $index">
+            <span>{{$index+1}}</span>
+          </li>            
         </ul>  
         <p><a href='https://fb.com/quizzofy'><span class="glyphicon glyphicon-info-sign"></span> Quizzofy on Facebook</a></p>
       </div>
@@ -80,6 +80,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/question.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>

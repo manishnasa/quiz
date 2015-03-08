@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name quizApp.controller:MainCtrl
+ * @name quizApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the quizApp
  */
 angular.module('quizApp')

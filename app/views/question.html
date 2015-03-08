@@ -1,27 +1,14 @@
 <div class="row">
 	<div class="col-xs-12 col-md-8">
 		<div class="row">
-			<p class="lead text-primary">If you can eat one of the following right now, what will you choose ?</p>			
+			Question: {{current}}
+			<p class="lead text-primary">{{questions[current].question}}</p>			
 		</div>
 		<div class="row">
-			<div class="list-group col-sm-12">
-				<a href="#" class="list-group-item list-group-item-info">
+			<div class="list-group col-sm-12" ng-repeat="option in questions[current].options">				
+				<a ng-href="#/question" class="list-group-item list-group-item-info" ng-click="nextQuestion()">
 					<!-- <img class="center" src="../images/happiness.png" /> -->
-					<h4 class="list-group-item-heading">Chocolate</h4>
-					<p class="list-group-item-text">Save earth. It's the only planet with chocolates.</p>
-				</a>
-				<a href="#" class="list-group-item list-group-item-info">
-					<h4 class="list-group-item-heading">Chocolate</h4>
-					<p class="list-group-item-text">Save earth. It's the only planet with chocolates.</p>
-				</a>
-			<!--</div>
-			<div class="list-group col-sm-6">-->
-				<a href="#" class="list-group-item list-group-item-info">
-					<h4 class="list-group-item-heading">Chocolate</h4>
-					<p class="list-group-item-text">Save earth. It's the only planet with chocolates.</p>
-				</a>
-				<a href="#" class="list-group-item list-group-item-info">
-					<h4 class="list-group-item-heading">Chocolate</h4>
+					<h4 class="list-group-item-heading">{{option.text}}</h4>
 					<p class="list-group-item-text">Save earth. It's the only planet with chocolates.</p>
 				</a>
 			</div>
