@@ -10,13 +10,7 @@
 angular.module('quizApp')
   .controller('QuestionCtrl', function ($scope, $routeParams) {
 
-	$scope.current = 0;
-
-  	$scope.nextQuestion() = function() {
-  		$scope.current = $scope.current + 1;
-  	}
-
-  	var q1 = {
+	  var q1 = {
   		question: "What was Salman Khan aka Prem's pet dialogue ?",
   		options: [ 
   			{
@@ -39,6 +33,13 @@ angular.module('quizApp')
   	};
 
   	$scope.questions = [
-      q1
-    ];    
+      q1    
+    ];
+
+    $scope.current = parseInt($routeParams.id, 10);
+    if( $scope.current == $scope.questions.length-1)
+      $scope.next = 999;  
+    else  
+      $scope.next = $scope.current + 1;
+
   });
