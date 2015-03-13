@@ -15,21 +15,19 @@ angular.module('quizApp')
   		options: [ 
   			{
   				text: "Mohit Sharma",
-  				category: "wrong"
   			},
   			{	
   				text :"Shikhar Dhawan",
-  				category: "right"
   			},
   			{	
   				text :"Rohit Sharma",
-  				category: "wrong"
   			},
   			{	
   				text :"Virat Kohli",
-  				category: "wrong"
   			}
-  		]  		
+  		],
+      answer: 1,
+      user: 0
   	};
 
     var q2 = {
@@ -51,7 +49,8 @@ angular.module('quizApp')
           text :"Ajinkya Rahane",
           category: "wrong"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
     var q3 = {
@@ -73,7 +72,8 @@ angular.module('quizApp')
           text :"Ajinkya Rahane",
           category: "wrong"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
     var q4 = {
@@ -95,7 +95,8 @@ angular.module('quizApp')
           text :"Ravindra Jadeja",
           category: "right"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
     var q5 = {
@@ -117,7 +118,8 @@ angular.module('quizApp')
           text :"Mohit Sharma",
           category: "wrong"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
     var q6 = {
@@ -139,7 +141,8 @@ angular.module('quizApp')
           text :"Mohit Sharma",
           category: "wrong"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
     var q7 = {
@@ -161,7 +164,8 @@ angular.module('quizApp')
           text :"Suresh Raina",
           category: "right"
         }
-      ]     
+      ],
+      answer: 0     
     };
 
   	$scope.questions = [
@@ -173,5 +177,9 @@ angular.module('quizApp')
       $scope.next = 999;  
     else  
       $scope.next = $scope.current + 1;
+
+    recordAnswer($option) {
+      $scope.questions[$scope.current].answer = $option;
+    }
 
   });

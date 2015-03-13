@@ -6,17 +6,15 @@
 		</div>
 		<div class="row">
 			<div class="list-group col-sm-12" ng-repeat="option in questions[current].options">						
-				<a ng-href="#/question/{{next}}" class="list-group-item list-group-item-info">
+				<a ng-href="#/question/{{next}}" class="list-group-item list-group-item-info" ng-click="recordAnswer($index)">
 					<!-- <img class="center" src="../images/happiness.png" /> -->
 					<h4 class="list-group-item-heading">{{option.text}}</h4>
-					<p class="list-group-item-text">Save earth. It's the only planet with chocolates.</p>
 				</a>
 			</div>
 		</div>		
 	</div>
 	<div class="col-xs-12 col-md-4">		
-  		<div class="well" style="width=250px; height=250px;">
-			Dong dong bell, pussy in the well!
+  		<div style="width:250px; height:250px; color:green;">			
 		</div>
   	</div>	
 </div>
