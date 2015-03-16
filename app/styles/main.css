@@ -1,10 +1,8 @@
-/* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
@@ -12,11 +10,10 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
-/* Make the masthead heading the same height as the navigation */
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -24,39 +21,37 @@ body {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
 .footer {
-  padding-top: 19px;
+  margin-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .container {
-    max-width: 730px;
+    max-width: 970px;
   }
 }
 .container-narrow > hr {
   margin: 30px 0;
-}
+} 
 
-/* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
+
+.playbutton {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;  
   font-size: 21px;
-  padding: 14px 24px;
 }
 
-/* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+  margin: 15px 0;
+  text-align: center;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -68,12 +63,74 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-  /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
+
   .jumbotron {
     border-bottom: 0;
   }
+
+  .questiontext {
+    font-size: 18px;  
+  }
+}
+
+.cover
+{
+    margin-bottom: 0px;
+    background-image: url(../images/worldcup-2015-Team-India.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white; 
+    height: 260px;  
+}
+
+.covertext
+{
+    color: #ffffff;    
+    font-weight:900;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+
+}
+
+.badge
+{
+  background-color:#428bca;
+  margin:5px;
+}
+
+.badgebox
+{
+  display:inline;
+}
+
+.messagebox
+{
+  margin-top:30px;
+}
+
+.wronganswer
+{
+  background-color: #ecc;
+  color: #444;
+}
+
+.questionbox
+{
+  background-color: #55a;
+  color: #fff;
+}
+
+.questiontext
+{
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+.questionpic
+{
+  margin-bottom: 10px;
 }

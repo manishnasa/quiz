@@ -1,12 +1,18 @@
-<div class="jumbotron">
-  <h2>How well do you know the Indian Cricket Team ?</h2>
-  <p class="lead">
-    <br><img src="images/happiness.png" alt="Are you really happy ?" height=180><br><br>
-  </p>
-  <p><a class="btn btn-primary" ng-href="#/question/0">Lets play... <span class="glyphicon glyphicon-pencil"></span></a></p>
+<div class="jumbotron cover">
+  <h2 class="covertext">How well do you know the Worldcup 2015 Indian Cricket Team ?</h2>     
 </div>
-<div class="row marketing">
-  <h4>How well do you know the Indian Cricket Team ?</h4>
-  <p>    
-  </p>  
+<div class="marketing">
+	<p>Do you know about Dhoni ? and about Virat Kohli ? Do you know who is Shikhar Dhawan's wife ? What kind of a Indian cricket fan are you ? How well do you know the World Cup 2015 India Cricket Team ?</p>
+
+	<p><a class="btn btn-warning playbutton" ng-href={{path}}>Lets play...</a></p>
+
+	<div class="well">
+	<p>Get all 7 questions right to earn <strong>The Ultimate Fan</strong> badge!</p>
+	<div ng-repeat="badge in badges" class="badgebox">
+		<div class="badge">
+			<img ng-src={{badge.image}} width=150 height=150/>
+			<h3><span class="label label-info">{{badge.name}}</span></h3>	
+		</div>					
+	</div>
+	</div>	
 </div>

@@ -18,24 +18,25 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
+    $routeProvider      
       .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'MainCtrl'
+      })
+      .when('/quiz/trivia/:quizname', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/quiz/trivia/:quizname/result', {
+        templateUrl: 'views/result.html',
+        controller: 'ResultController'
       })
-      .when('/question/999', {
-        templateUrl: 'views/about.html',
-        controller: 'QuestionCtrl'
-      })
-      .when('/question/:id', {
+      .when('/quiz/trivia/:quizname/question/:id', {
         templateUrl: 'views/question.html',
-        controller: 'QuestionCtrl'
-      })
+        controller: 'QuestionController'
+      })     
       .otherwise({
         redirectTo: '/'
       });
   });
+  

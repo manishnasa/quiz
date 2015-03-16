@@ -8,10 +8,7 @@
  * Controller of the quizApp
  */
 angular.module('quizApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $routeParams, Badges) {
+    $scope.badges = Badges.get();
+    $scope.path = "#/quiz/trivia/" + $routeParams.quizname + "/question/0"    
   });

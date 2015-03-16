@@ -1,21 +1,19 @@
 <div class="row">
-	<div class="col-xs-12 col-md-8">
-		<div class="row">
-			Question: {{current+1}}
-			<p class="lead text-primary">{{questions[current].question}}</p>			
+	<div class="col-xs-12 col-md-7">		
+		<div class="well questionbox">
+			<img src={{questions[current].image}} width=100% ng-show = "questions[current].image" class="questionpic">
+			<!-- Question: {{current+1}} -->
+			<span class="questiontext">{{questions[current].question}}</span>				
 		</div>
-		<div class="row">
-			<div class="list-group col-sm-12" ng-repeat="option in questions[current].options">						
-				<a ng-href="#/question/{{next}}" class="list-group-item list-group-item-info" ng-click="recordAnswer($index)">
-					<!-- <img class="center" src="../images/happiness.png" /> -->
+		<div>
+			<div class="list-group" ng-repeat="option in questions[current].options">						
+				<a ng-href={{path}} class="list-group-item list-group-item-info" ng-click="recordUserInput($index)">
 					<h4 class="list-group-item-heading">{{option.text}}</h4>
 				</a>
 			</div>
 		</div>		
 	</div>
-	<div class="col-xs-12 col-md-4">		
-  		<div style="width:250px; height:250px; color:green;">			
-		</div>
+	<div class="col-xs-12 col-md-5">		  		
   	</div>	
 </div>
 
