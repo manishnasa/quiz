@@ -29,7 +29,7 @@ angular.module('quizApp')
       $scope.userbadge =  $scope.badges[3];
     }
 
-    $scope.socialmessage = "I got - '" + $scope.userbadge.name + "'! How well do you know the Worldcup 2015 India Team ?";
+    $scope.socialmessage = "I got: '" + $scope.userbadge.name + "'! How well do u know Team India? Take the 7 question test: http://goo.gl/DPOlKB";
 
     $scope.share = function() {
       Facebook.share();

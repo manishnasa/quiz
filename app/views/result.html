@@ -26,46 +26,40 @@
 			</div>
 			Please like us on Facebook...
 			<div style="margin-left: auto; margin-right: auto; width: 100px;" class="margin-top">
-				<div class="fb-like" data-href="https://www.facebook.com/quizzofy" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>				
+				<!--<div class="fb-like" data-href="https://www.facebook.com/quizzofy" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>				-->
+				<div facebook-like></div>
 			</div>		
-			<div class="margin-top">
+			<div style="margin-top:30px;">
 				<a href="" ng-click="scrollTo('key')">Scroll down for Answer Key</a>
 			</div>
-			<div>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- result1 -->
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-7864311627791283"
-				     data-ad-slot="2601543705"
-				     data-ad-format="auto"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
+			<div data-result1-ad></div>
 		</div>
 	</div>
 </div>
 <div class="row">
+	<div class="col-xs-12 col-md-5">
+		<div class="list-group-item text-center">
+			<h3><strong>Trivia Answers</strong></h3>
+		</div>
+		<div ng-repeat="q in questions" class="list-group">
+			<div class="list-group-item" ng-class="{'wronganswer': q.options[q.answer] != q.options[q.input]}">
+				<p>{{q.question}}</p>
+				<p><strong>Correct Answer:</strong> {{q.options[q.answer].text}}</p>
+				<p><strong>Your Answer:</strong> {{q.options[q.input].text}}</p>
+			</div>			
+		</div>				
+	</div>	
 	<div class="col-xs-12 col-md-7">			
 		<div class="list-group-item text-center">
 			<h3><strong>Make a comment...</strong></h3>
 		</div>
-		<div width=100% class="fb-comments" data-href="http://www.quizzofy.com/quiz/trivia/worldcup-2015-india-team/question/999" data-numposts="10" data-colorscheme="light"></div>
+		<div id="fb-comment-box" dyn-fb-comment-box
+        page-href="http://quizzofy.com/#/quiz/trivia/worldcup-2015-india-team/result"
+        numposts="5"
+        colorscheme="light"></div>
 	</div>
-	<div class="col-xs-12 col-md-5">
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- result2 -->
-		<ins class="adsbygoogle"
-		     style="display:block"
-		     data-ad-client="ca-pub-7864311627791283"
-		     data-ad-slot="5555010104"
-		     data-ad-format="auto"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	</div>	
 </div>
+<!--
 <div class="row" id="key">
 	<div class="col-xs-12 col-md-12">		
 		<div class="list-group-item text-center">
@@ -80,3 +74,4 @@
 		</div>		
 	</div>	
 </div>
+-->

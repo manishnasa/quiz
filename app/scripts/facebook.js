@@ -6,7 +6,7 @@ angular.module('quizApp')
 		Fb.share = function() {
 			FB.ui({
 			  method: 'share',
-			  href: 'http://quizzofy.com/quiz/trivia/worldcup-2015-india-team/',
+			  href: 'http://quizzofy.com/#/quiz/trivia/worldcup-2015-india-team/',
 			}, function(response){});
 		}
 
