@@ -8,7 +8,7 @@
  * Controller of the quizApp
  */
 angular.module('quizApp')
-  .controller('QuestionController', function ($scope, $routeParams, Questions) {
+  .controller('QuestionController', function ($scope, $routeParams, $window, $location, Questions) {
 
     $scope.questions = Questions.get();
 
@@ -23,5 +23,9 @@ angular.module('quizApp')
       
     $scope.recordUserInput = function(option) {
       Questions.recordUserInput($scope.current, option);
-    }  
+    }
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.url() });
+    });        
   });

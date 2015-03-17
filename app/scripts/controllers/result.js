@@ -6,7 +6,7 @@
  * @description
  */
 angular.module('quizApp')
-  .controller('ResultController', function ($anchorScroll, $location, $scope, Questions, Badges, Facebook) {
+  .controller('ResultController', function ($anchorScroll, $location, $scope, $window, Questions, Badges, Facebook) {
 
     $scope.badges = Badges.get();
     $scope.questions = Questions.get();
@@ -38,6 +38,10 @@ angular.module('quizApp')
     $scope.scrollTo = function(id) {
       $location.hash(id);
       $anchorScroll();
-   }
+    }
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.url() });
+    });  
 
   });

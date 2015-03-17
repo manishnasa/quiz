@@ -8,7 +8,11 @@
  * Controller of the quizApp
  */
 angular.module('quizApp')
-  .controller('MainCtrl', function ($scope, $routeParams, Badges) {
+  .controller('MainCtrl', function ($scope, $routeParams, $window, $location, Badges) {
     $scope.badges = Badges.get();
-    $scope.path = "#/quiz/trivia/" + $routeParams.quizname + "/question/0"    
+    $scope.path = "#/quiz/trivia/" + $routeParams.quizname + "/question/0"
+
+    $scope.$on('$viewContentLoaded', function(event) {
+    	$window.ga('send', 'pageview', { page: $location.url() });
+  	});  
   });
