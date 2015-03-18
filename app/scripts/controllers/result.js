@@ -32,7 +32,7 @@ angular.module('quizApp')
     $scope.socialmessage = "I got: '" + $scope.userbadge.name + "'! How well do u know Team India? Take the 7 question test: http://goo.gl/DPOlKB";
 
     $scope.share = function() {
-      Facebook.share();
+      Facebook.share($scope.userbadge.name);
     }
 
     $scope.scrollTo = function(id) {
