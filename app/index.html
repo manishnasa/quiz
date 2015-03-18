@@ -57,7 +57,6 @@
           <div class="col-xs-2 col-md-2">
             <h1>
               <a class="h1 text-muted" href="#main">Quizzofy</a>          
-              <!-- <div class="fb-like" data-href="https://www.facebook.com/quizzofy" data-layout="standard" data-action="like" data-show -faces="true" data-share="true"></div> -->
             </h1>
           </div>
           <div class="col-xs-10 col-md-10">
@@ -78,7 +77,9 @@
           <div class="btn btn-primary" onClick="FB.ui({
         method: 'share',
         href: 'http://quizzofy.com/#/quiz/trivia/worldcup-2015-india-team/',
-      }, function(response){});">Share</div>
+      }, function(response){
+      console.log(response);
+    });">Share</div>
         </div>  
       <div class="margin-top" ng-view=""></div>
       
