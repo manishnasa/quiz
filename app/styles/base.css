@@ -3,6 +3,12 @@ body
 	overflow-x: hidden;
 }
 
+html, body. div{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
 .list-group-item {
 	margin: 5px;
 }
