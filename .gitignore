@@ -1,4 +1,5 @@
 node_modules
 .tmp
 .sass-cache
+s3_website.yml
 bower_components
