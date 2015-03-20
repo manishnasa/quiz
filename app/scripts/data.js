@@ -2,6 +2,7 @@ angular.module('quizApp')
   .factory('Questions', function() {    
     var q1 = {
       question: "Which Indian cricketer is married to the half Bengali - half British amateur boxer, Ayesha Mukherji  ?",
+      hint: "This Delhi lad sports big turned up mustache with a baldish look!",
       image: "images/shikhar-dhawan-wife.jpg",
       options: [ 
         {
@@ -23,6 +24,7 @@ angular.module('quizApp')
 
     var q2 = {
       question: "Who got run out for a duck in their One Day International debut ?",
+      hint: "He is the Jharkhand guy who went on to captain India!",
       image: "",
       options: [ 
         {
@@ -48,6 +50,7 @@ angular.module('quizApp')
 
     var q3 = {
       question: "Whose nick name is 'Cheeku' ?",
+      hint: "Lets just say Anushka Sharma loves Cheeku!",
       image: "",
       options: [ 
         {
@@ -73,6 +76,7 @@ angular.module('quizApp')
 
     var q4 = {
       question: "Which of the following cricketers is the son of a watchman from Jamnagar ?",
+      hint: "He is an all rounder of sorts, popularly known as Sir!",
       image: "",
       options: [ 
         {
@@ -98,6 +102,7 @@ angular.module('quizApp')
 
     var q5 = {
       question: "Which cricketer got the opportunity to make his test debut because Shikhar Dhawan injured his knuckles and Gautam Gambhir caught jaundice ?",
+      hint: "This Maharashtrian mulga is peaceful guy, also called the Silent Warrior!",
       image: "",
       options: [ 
         {
@@ -123,6 +128,7 @@ angular.module('quizApp')
 
     var q6 = {
       question: "Who is the son of a coal mine worker from Deoria district in Uttar Pradesh ?",
+      hint: "He is one of our two opening fast bowlers!",
       image: "",
       options: [ 
         {
@@ -148,6 +154,7 @@ angular.module('quizApp')
 
     var q7 = {
       question: "Who is the only Indian batsman to have scored a century in World T20 Cricket ?",
+      hint: "He is a small guy from Ghaziabad who bats down the order and hits BIG!",
       image: "",
       options: [ 
         {

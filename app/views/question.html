@@ -3,7 +3,15 @@
 		<div class="well questionbox">
 			<img src={{questions[current].image}} width=100% ng-show = "questions[current].image" class="questionpic">
 			<!-- Question: {{current+1}} -->
-			<span class="questiontext">{{questions[current].question}}</span>				
+			<div class="questiontext">{{questions[current].question}}</div>				
+			<div class="margin-top btn btn-info" ng-show="questions[current].hint.length">
+				<div ng-click="hint=true" ng-hide="hint">
+				 	Show Hint
+				</div>
+				<div ng-show="hint">
+					Hint: {{questions[current].hint}}	
+				</div>
+			</div>			
 		</div>
 		<div>
 			<div class="list-group" ng-repeat="option in questions[current].options">						
