@@ -4,8 +4,8 @@
 			<img src={{questions[current].image}} width=100% ng-show = "questions[current].image" class="questionpic">
 			<!-- Question: {{current+1}} -->
 			<div class="questiontext">{{questions[current].question}}</div>				
-			<div class="margin-top btn btn-info" ng-show="questions[current].hint.length">
-				<div ng-click="hint=true" ng-hide="hint">
+			<div class="margin-top" ng-show="questions[current].hint.length">
+				<div ng-click="hint=true" ng-hide="hint" class="btn btn-info">
 				 	Show Hint
 				</div>
 				<div ng-show="hint">
